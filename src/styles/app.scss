@@ -1,0 +1,37 @@
+@import url("https://fonts.cdnfonts.com/css/barlow");
+@import url("https://fonts.cdnfonts.com/css/londrina-solid");
+@import "./mixins";
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Barlow", sans-serif;
+  background: $primary-color;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 1.5em;
+}

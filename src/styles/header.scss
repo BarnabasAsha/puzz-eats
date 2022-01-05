@@ -1,0 +1,51 @@
+@import "./mixins";
+
+
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: 135px;
+    height: 38px;
+  }
+
+  ._right {
+    @include flex;
+    justify-content: flex-start;
+
+    .header_nav {
+      ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+  
+        li {
+          margin-left: 96px;
+  
+          a {
+            @include heading;
+            text-transform: capitalize;
+            font-size: 1rem;
+            line-height: 1.5rem;
+          }
+        }
+      }
+  
+      @include mobile {
+        .header_nav {
+          display: none;
+        }
+      }
+    }
+
+    .cta {
+      margin-left: 48px;
+      @include btn;
+    }
+  }
+  
+}

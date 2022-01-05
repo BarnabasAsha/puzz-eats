@@ -1,0 +1,23 @@
+@import "./mixins";
+
+.section_one {
+  width: 100%;
+  @include flex;
+  justify-content: space-between;
+
+  ._left {
+    h1 {
+      @include heading;
+    }
+
+    p {
+      @include text;
+      max-width: 388px;
+      margin: 16px 0 32px 0;
+    }
+
+    .cta {
+      @include btn;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "./mixins";
+
+.hero {
+  position: relative;
+  margin: 2em 0;
+  padding: 1em 2em;
+  width: 100%;
+  height: 176px;
+  @include flex;
+  justify-content: space-between;
+  background: url(../assets/hero-bg.png);
+  background-color: #7F79E4;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+
+  .hero_content {
+    
+    h1 {
+      @include heading;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    p {
+      @include text;
+      max-width: 480px;
+      color: #fff;
+    }
+  }
+
+  .hero_img {
+    position: relative;
+    z-index: 7;
+    width: 400px;
+    transform: translateX(35px);
+  }
+}
