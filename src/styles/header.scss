@@ -10,7 +10,7 @@
 
   .logo {
     width: 135px;
-    height: 38px;
+    // height: 38px;
   }
 
   ._right {
@@ -36,9 +36,7 @@
       }
   
       @include mobile {
-        .header_nav {
           display: none;
-        }
       }
     }
 

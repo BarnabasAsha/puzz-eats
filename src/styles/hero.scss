@@ -15,6 +15,12 @@
   border-radius: 20px;
   overflow: hidden;
 
+  @include mobile {
+    height: auto;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  }
+
   .hero_content {
     
     h1 {
@@ -37,5 +43,9 @@
     z-index: 7;
     width: 400px;
     transform: translateX(35px);
+
+    @include mobile {
+      display: none;
+    }
   }
 }

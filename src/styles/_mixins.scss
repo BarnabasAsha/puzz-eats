@@ -41,6 +41,11 @@ $light-black: #2b2b2d;
   border: none;
   text-transform: capitalize;
   @include flex;
+
+  @include mobile {
+    width: 150px;
+    height: 40px;
+  }
 }
 
 @mixin mobile {

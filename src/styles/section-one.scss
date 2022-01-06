@@ -5,6 +5,11 @@
   @include flex;
   justify-content: space-between;
 
+  @include mobile {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
   ._left {
     h1 {
       @include heading;
