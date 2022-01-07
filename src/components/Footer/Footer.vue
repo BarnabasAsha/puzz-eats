@@ -2,7 +2,7 @@
   <div class="container">
     <div class="footer">
       <FooterItem
-        v-for="item in items"
+        v-for="item in myitems"
         :key="item.title"
         :title="item.title"
         :list="item.list"
@@ -21,7 +21,7 @@ export default {
     FooterItem,
   },
   setup() {
-    const items = ref([
+    const myitems = ref([
       {
         title: "Learn More",
         list: ["How It Works", "Terms And Conditions"],
@@ -43,7 +43,7 @@ export default {
         list: ["Join Community"],
       },
     ]);
-    return { items };
+    return { myitems };
   },
 };
 </script>
