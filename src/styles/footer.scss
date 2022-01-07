@@ -1,0 +1,40 @@
+@import "./mixins";
+
+.footer {
+  margin-top: 100px;
+  padding: 1em 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between
+}
+
+.footer_item {
+  @include mobile {
+    width: 50%;
+    margin-bottom: 1.5em;
+    margin-right: 5px
+  }
+  h2 {
+    @include heading;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin-bottom: 38px;
+
+    @include mobile {
+      font-size: 1rem;
+      line-height: 1.8rem;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    li {
+      @include text;
+      margin-bottom: 8px;
+    }
+  }
+}

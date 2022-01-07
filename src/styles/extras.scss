@@ -1,0 +1,46 @@
+@import "./mixins";
+
+.extras {
+  width: 100%;
+  @include flex;
+  justify-content: space-between;
+  margin-top: 100px;
+
+  @include mobile {
+    margin-top: 60px
+  }
+
+  ._left {
+    .subtitle {
+      @include text;
+      color: $secondary-color;
+      text-transform: capitalize;
+      font-weight: 700;
+    }
+
+    h2 {
+      @include heading;
+      margin: 16px 0;
+    }
+
+    p {
+      @include text;
+      max-width: 388px;
+      margin: 40px 0;
+    }
+
+    .cta {
+      @include btn;
+    }
+  }
+
+  ._right {
+    @include mobile {
+      display: none;
+    }
+    
+    &_img {
+      width: 270px;
+    }
+  }
+}

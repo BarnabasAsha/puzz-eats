@@ -29,6 +29,11 @@
       line-height: 2.5rem;
       color: #fff;
       margin-bottom: 16px;
+
+      @include mobile {
+        font-size: 1.7rem;
+        line-height: 2.2rem;
+      }
     }
 
     p {

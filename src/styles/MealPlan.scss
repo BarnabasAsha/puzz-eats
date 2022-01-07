@@ -1,0 +1,41 @@
+@import "./mixins";
+
+.meal_plan {
+  min-width: 285px;
+  width: 285px;
+  margin-right: 20px;
+
+  &_img {
+    min-width: 100%;
+    width: 100%;
+    height: 240px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+  }
+
+  &_details {
+    h3 {
+      @include heading;
+      font-size: 2.5rem;
+      line-height: 2rem;
+      margin-bottom: 8px;
+
+      @include mobile {
+        font-size: 2rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    p {
+      @include heading;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      text-transform: none;
+
+      @include mobile {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+      }
+    }
+  }
+}

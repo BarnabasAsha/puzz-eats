@@ -1,0 +1,35 @@
+@import "./mixins";
+
+.option {
+  min-width: 284px;
+  width: 284px;
+  margin-bottom: 3em;
+
+  &_img {
+    width: 100%;
+    height: 240px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+  }
+
+  &_title {
+    @include flex;
+    justify-content: space-between;
+    
+    h3 {
+      @include heading;
+    font-size: 2.5rem;
+    line-height: 2rem;
+
+    @include mobile {
+      font-size: 2rem;
+      line-height: 1.5rem;
+    }
+    }
+
+    &_arrow {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

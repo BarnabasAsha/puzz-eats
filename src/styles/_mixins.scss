@@ -6,11 +6,16 @@ $light-black: #2b2b2d;
 
 @mixin heading {
   font-family: "Londrina Solid", sans-serif;
-  font-size: 64px;
-  line-height: 72px;
+  font-size: 4rem;
+  line-height: 4.5rem;
   font-weight: 400;
   color: $dark-black;
   text-transform: uppercase;
+
+  @include mobile {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
 }
 
 @mixin text {
@@ -43,13 +48,20 @@ $light-black: #2b2b2d;
   @include flex;
 
   @include mobile {
-    width: 150px;
+    width: 140px;
     height: 40px;
+    font-size: .9rem;
   }
 }
 
 @mixin mobile {
   @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media (max-width: 1000px) {
     @content;
   }
 }

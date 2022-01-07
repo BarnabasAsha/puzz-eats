@@ -1,0 +1,67 @@
+@import "./mixins";
+
+.opinions {
+  width: 100%;
+  @include flex;
+  justify-content: space-between;
+  margin-top: 130px;
+
+  @include mobile {
+    margin-top: 60px;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  ._left {
+    .subtitle {
+      @include text;
+      color: $tertiary-color;
+      text-transform: capitalize;
+      font-weight: 700;
+    }
+
+    h2 {
+      @include heading;
+      margin: 16px 0;
+    }
+
+    p {
+      @include text;
+      max-width: 388px;
+    }
+
+    .slider {
+      @include flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      margin-top: 72px;
+
+      span {
+        display: block;
+        width: 12px;
+        height: 12px;
+        border: 1px solid #10002B;
+        margin: 0 8px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &.active {
+          width: 16px;
+          height: 16px;
+          background: $secondary-color;
+          border: none;
+        }
+      }
+    }
+  }
+
+  ._right {
+    width: 357px;
+
+    @include mobile {
+      width: auto;
+      margin-bottom: 1.5em;
+    }
+  }
+}

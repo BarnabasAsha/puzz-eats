@@ -1,0 +1,69 @@
+@import "./mixins";
+
+.community {
+  margin-top: 63px;
+  width: 100%;
+  height: 640px;
+  border-radius: 80px;
+  overflow: hidden;
+  background: $secondary-color;
+  @include flex;
+  justify-content: space-between;
+
+  @include mobile {
+    border-radius: 40px;
+  }
+
+  ._left {
+    width: 60%;
+    position: relative;
+    padding: 5%;
+
+    @include mobile {
+      width: 100%
+    }
+
+    h2 {
+      @include heading;
+      color: #fff;
+    }
+
+    p {
+      position: relative;
+      @include text;
+      color: #fff;
+      max-width: 388px;
+      margin: 24px 0;
+      z-index: 3;
+
+    }
+
+    .cta {
+      @include btn;
+      background: #fff;
+      color: $secondary-color;
+    }
+
+    .puzzle {
+      position: absolute;
+      right: 0;
+      bottom: 20px;
+      width: 211px;
+      z-index: 1;
+
+      @include mobile {
+        width: 120px;
+        bottom: -30px;
+      }
+    }
+  }
+
+  ._right {
+    width: 40%;
+    height: 100%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}
