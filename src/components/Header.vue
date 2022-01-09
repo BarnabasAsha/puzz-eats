@@ -5,33 +5,51 @@
         <div class="logo">
           <img src="../assets/puzz-eats.png" alt="Puzz eats" />
         </div>
-        <div class="_right">
-          <nav class="header_nav">
-            <ul>
-              <li>
-                <a href="#">Recipes</a>
-              </li>
-              <li>
-                <a href="#">Meal Plans</a>
-              </li>
-              <li>
-                <a href="#">Shop</a>
-              </li>
-              <li>
-                <a href="#">Combo Pack</a>
-              </li>
-            </ul>
-          </nav>
+        <nav class="header_nav">
+          <ul>
+            <li>
+              <a href="#">Recipes</a>
+            </li>
+            <li>
+              <a href="#">Meal Plans</a>
+            </li>
+            <li>
+              <a href="#">Shop</a>
+            </li>
+            <li>
+              <a href="#">Combo Pack</a>
+            </li>
+          </ul>
           <button class="cta"><a href="#">Create Meal Plan</a></button>
-        </div>
+        </nav>
+        <button
+          @click="() => (status = !status)"
+          class="header_menu"
+          :class="status ? 'active' : ''"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
+  <MobileNav v-if="status" />
 </template>
 
 <script>
+import MobileNav from "./MobileNav.vue";
+import { ref } from "vue";
+
 export default {
   name: "Header",
+  components: {
+    MobileNav,
+  },
+  setup() {
+    const status = ref(false);
+    return { status };
+  },
 };
 </script>
 
