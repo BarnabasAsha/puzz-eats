@@ -11,6 +11,10 @@
   }
 
   ._left {
+
+    @include mobile {
+      margin-top: 1.5em;
+    }
     h1 {
       @include heading;
     }
